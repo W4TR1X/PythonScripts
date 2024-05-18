@@ -6,7 +6,7 @@ import os, re, sys
 """
 
 bom = b"^\xEF\xBB\xBF"
-pattern = r"^(.*)\.(php|js|css|txt|inc|conf|tpl|html|htm|cs|cpp|h|c|cxx)$"
+pattern = r"^(.*)\.(js|css|txt|html|htm|cs|razor|cshtml|xaml|csproj|sln|json|xml)$"
 cleaned_files = total_files = 0
 
 if len(sys.argv) == 2:
