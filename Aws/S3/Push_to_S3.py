@@ -19,4 +19,4 @@ file_path = os.path.join(LOCAL_DIRECTORY, LOCAL_FILENAME)
 
 aws_file_path = f"{AWS_PATH}/{AWS_FILENAME}"
 s3_client.upload_file(file_path, AWS_BUCKET_NAME, aws_file_path)
-print(f"aws upload: '{aws_file_path}' is uploaded")
+print(f"S3 Upload: '{aws_file_path}' is uploaded")

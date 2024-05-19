@@ -22,11 +22,11 @@ if os.path.isdir(rundir):
                 buffer = open(filename, 'rb').read()
                 file = re.search(bom, buffer)
                 if file:
-                    print( "Remove BOM-marker from %s" % name)
+                    print("UTF-BOM Remover: Removing marker from %s" % name)
                     cleaned_files+= 1
                     open(filename, 'wb').write(buffer[:file.start()] + buffer[file.end():])
         total_files+= len(files)
-    print ("There are was %d files with BOM in %d files" % (cleaned_files, total_files))
+    print ("UTF-BOM Remover: There are was %d files with BOM in %d files" % (cleaned_files, total_files))
 else:
-    print ("Error: You must set a valid directory.")
+    print ("UTF-BOM Remover: You must set a valid directory.")
     
